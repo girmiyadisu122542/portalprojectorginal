@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use App\Models\FreshStudent;
 use Illuminate\Http\Request;
+use App\Imports\FreshStudentImport;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 
 class FreshStudentController extends Controller
 {
@@ -60,7 +62,16 @@ class FreshStudentController extends Controller
             ],500);
           }
     }
+    public function importFreshStudents(Request $request){
+        // dd('hey');
+        $request->validate([
+            'excelFile'=>'file|required|mimes:xlsx',
 
+        ]);
+        // dd($request->all());
+        Excel::import(new FreshStudentImport, $request->excelFile);
+        return response()->Json(['message'=>'student imported successfuly']);
+    }
     public function show($id)
     {
         $fresh_student=FreshStudent::find($id);

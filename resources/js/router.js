@@ -238,6 +238,38 @@ const routes = [
                 name: "EditGraduateStudent",
                 component: () => import("./views/students/graduate/edit.vue"),
             },
+            //payments
+            {
+                path: "all-payments",
+                name: "AllPayments",
+                component: () => import("./views/setups/payments/index.vue"),
+            },
+            {
+                path: "create-payments",
+                name: "CreatePayments",
+                component: () => import("./views/setups/payments/create.vue"),
+            },
+            {
+                path: "edit-payments/:id",
+                name: "EditPayment",
+                component: () => import("./views/setups/payments/edit.vue"),
+            },
+            //mails
+            {
+                path: "all-mails",
+                name: "AllMails",
+                component: () => import("./views/setups/mails/index.vue"),
+            },
+            {
+                path: "create-mails",
+                name: "CreateMails",
+                component: () => import("./views/setups/mails/create.vue"),
+            },
+            {
+                path: "edit-mails/:id",
+                name: "EditMails",
+                component: () => import("./views/setups/mails/edit.vue"),
+            },
         ],
         meta: {
             requiresAuth: true,

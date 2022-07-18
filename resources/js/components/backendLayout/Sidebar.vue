@@ -77,7 +77,16 @@
                         <i class="bi bi-circle"></i><span>All Announcements</span>
                     </router-link>
                 </li>
-
+  <li>
+                    <router-link to="/home/all-payments">
+                        <i class="bi bi-circle"></i><span>All Payments</span>
+                    </router-link>
+                </li>
+                 <li>
+                    <router-link to="/home/all-mails">
+                        <i class="bi bi-circle"></i><span>Mailings</span>
+                    </router-link>
+                </li>
             </ul>
         </li><!-- End Components Nav -->
 

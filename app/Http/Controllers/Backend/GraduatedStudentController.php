@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Models\GraduatedStudent;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\GraduatedStudentsImport;
 
 class GraduatedStudentController extends Controller
 { 
@@ -57,7 +59,12 @@ class GraduatedStudentController extends Controller
             ],500);
           }
     }
-
+    // import from excel
+public function importGraduateStudents(Request $request){
+    // dd('yes');
+    Excel::import(new GraduatedStudentsImport, $request->excelFile);
+    return response()->Json(['message'=>'student imported successfuly']);
+}
     public function show($id)
     {
         $graduate_student=GraduatedStudent::find($id);

@@ -17,11 +17,33 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
+                  
                     <div class="card-body">
                         <h5 class="card-title">Add Fresh Student
                             <router-link to="/home/all-fresh_students" class="btn btn-primary" style="float:right"> All Fresh Student</router-link>
 
                         </h5>
+       <!-- import from excel start -->
+  <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-md-6 border ">
+                                <h3 class="text-primary italic">Import From Excel</h3>
+                                      <form  @submit.prevent="ImportExcel">
+                                        <div class="form-gruop">
+                                            <input type="file" @change="selectedFile" name="file" class="form-control text-success">
+                                        </div><br>
+                                <div class="text-danger" v-if="errors.excelFile">*{{ errors.excelFile[0] }}</div>
+
+                                          <div class="form-gruop">
+                                            <input type="submit" class="btn btn-success" value="add">
+                                        </div><br>
+                                      </form>
+                            </div>
+                        </div>
+                    </div>
+       <!-- import from excel end -->
+
+
                         <form class="row g-3" @submit.prevent="addFreshStudents">
                             <div class="col-md-4">
                                 <label for="inputNanme4" class="form-label"> <b>Acadamic Year</b> </label>
@@ -139,7 +161,9 @@ export default {
                 year_id: '',
             },
             colleges: {},
-            acadamic_years: {}
+            acadamic_years: {},
+            excelFile:'',
+
         }
     },
 
@@ -185,7 +209,27 @@ export default {
                             break;
                     }
                 })
-        }
+        },
+selectedFile(e){
+    this.excelFile = e.target.files[0];
+            console.log(this.excelFile);
+},
+ImportExcel(){
+    let formData = new FormData();
+    formData.append("excelFile", this.excelFile);
+    this.axios.post("/api/user/importFreshStudents",formData).then(res=>{
+            if(res.status==200){
+                this.$router.push('/home/all-fresh_students');
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Student  Inserted successfully!'
+                    });
+            }
+    }).catch(error=>{
+    this.errors = error.response.data.errors;
+
+    })
+}
     },
     mounted() {
         this.axios.get('/api/user/colleges')

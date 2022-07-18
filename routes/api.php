@@ -1,7 +1,9 @@
 <?php
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Backend\MailController;
 use App\Http\Controllers\Backend\CollegeController;
+use App\Http\Controllers\Backend\PaymentController;
 use App\Http\Controllers\Backend\SemisterController;
 use App\Http\Controllers\Backend\DepartmentController;
 use App\Http\Controllers\Backend\StudyLevelController;
@@ -34,7 +36,12 @@ Route::group(['prefix'=>'user'],function(){
      // student
      Route::apiResource('/fresh_students',FreshStudentController::class)->middleware('scope:do_anything');
      Route::apiResource('/graduate_students',GraduatedStudentController::class)->middleware('scope:do_anything');
-      
+     Route::post('/importFreshStudents',[FreshStudentController::class,'importFreshStudents'])->middleware('scope:do_anything');
+     Route::post('/importGraduateStudents',[GraduatedStudentController::class,'importGraduateStudents'])->middleware('scope:do_anything');
+      //payments
+     Route::apiResource('/payments',PaymentController::class)->middleware('scope:do_anything');
+      // mails
+     Route::apiResource('/mails',MailController::class)->middleware('scope:do_anything');
       
       Route::post('edit-category',function(){
           return response()->json([
