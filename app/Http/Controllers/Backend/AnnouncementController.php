@@ -122,4 +122,13 @@ class AnnouncementController extends Controller
             ],500);
           }
     }
+
+    public function getAnnouncemts(){
+        $anouncement=Announcement::with(['semister','year'])->where('status','Active')->get();
+       return response()->json($anouncement);
+    }
+   public function getAnnouncemtDetail($id){
+    $anouncement=Announcement::with(['semister','year'])->where('status','Active')->where('id',$id)->get();
+      return response()->json($anouncement,);
+   }  
 }

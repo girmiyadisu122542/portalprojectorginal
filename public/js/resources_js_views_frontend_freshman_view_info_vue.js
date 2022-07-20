@@ -159,11 +159,6 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'error',
             title: 'We cannot find this Registration number ,try again!'
           });
-
-          _this.flashMessage.error({
-            message: 'Something went wrong please contact system admin!',
-            time: 5000
-          });
         }
       })["catch"](function (error) {
         switch (error.response.status) {
@@ -218,7 +213,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#main[data-v-3088fdda],\r\n#footer[data-v-3088fdda] {\r\n    margin-left: 0px;\n}\n.mybody[data-v-3088fdda] {\r\n    background-color: #e9f1f1;\r\n    background-image: url('https://images.freeimages.com/images/large-previews/da8/rainbow-1369910.jpg');\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#main[data-v-3088fdda],\r\n#footer[data-v-3088fdda] { \r\n    margin-left: 0px;\n}\n.mybody[data-v-3088fdda] {\r\n    background-color: #e9f1f1;\r\n    background-image: url('https://images.freeimages.com/images/large-previews/da8/rainbow-1369910.jpg');\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -383,9 +378,10 @@ var render = function () {
                       directives: [
                         {
                           name: "model",
-                          rawName: "v-model",
+                          rawName: "v-model.trim",
                           value: _vm.registration_number,
                           expression: "registration_number",
+                          modifiers: { trim: true },
                         },
                       ],
                       staticClass: "form-control",
@@ -399,7 +395,10 @@ var render = function () {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.registration_number = $event.target.value
+                          _vm.registration_number = $event.target.value.trim()
+                        },
+                        blur: function ($event) {
+                          return _vm.$forceUpdate()
                         },
                       },
                     }),

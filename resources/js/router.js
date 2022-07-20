@@ -45,7 +45,43 @@ const routes = [
                 name:'Freshman Info',
                 component:()=>import('./views/frontend/freshman/view_info.vue')
 
-            }
+            },
+            //announcement
+            {
+                path:'announcemnet_list',
+                name:'AnnouncementList',
+                component:()=>import('./views/frontend/announcement/announcemnet_list.vue')
+            },
+            {
+                path:'announcemnet_detail/:id',
+                name:'AnnouncementDetail',
+                component:()=>import('./views/frontend/announcement/aanouncement_detail.vue')
+            },
+            //admission 
+            {
+                path:'admission_form',
+                name:'AdmissionForm',
+                component:()=>import('./views/frontend/admission/admission_form.vue')
+            },
+             {
+                path:'application_form/:id',
+                name:'ApplicationForm',
+                component:()=>import('./views/frontend/admission/application_form.vue')
+             },
+            //programs
+            {
+                path:'programs',
+                name:'Programs',
+                component:()=>import('./views/frontend/programs.vue')
+            },
+            //official transcript
+            {
+                path:'official_transcript_form',
+                name:'OfficailTranscript',
+                component:()=>import('./views/frontend/alumni/official_transcript.vue')
+            },
+          
+
           
         ]
       } ,
@@ -238,6 +274,7 @@ const routes = [
                 name: "EditGraduateStudent",
                 component: () => import("./views/students/graduate/edit.vue"),
             },
+<<<<<<< HEAD
             //payments
             {
                 path: "all-payments",
@@ -269,6 +306,16 @@ const routes = [
                 path: "edit-mails/:id",
                 name: "EditMails",
                 component: () => import("./views/setups/mails/edit.vue"),
+=======
+              // finance routes
+
+            //official transcript 
+
+            {
+                path:'finance_official_transcript',
+                name:'FinanceOfficailTranscript',
+                component:()=>import('./views/alumni/finance/official_transcript/index.vue')
+>>>>>>> 725b342 (Updated project including admission and official transcript)
             },
         ],
         meta: {

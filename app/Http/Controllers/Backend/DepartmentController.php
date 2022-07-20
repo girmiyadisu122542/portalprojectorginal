@@ -99,4 +99,8 @@ class DepartmentController extends Controller
          } 
       
     }
+    public function getPrograms(){
+        $dept=Departement::with(['college','admission','studyLevel'])->get();
+        return response()->json($dept);
+    }
 }

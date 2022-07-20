@@ -132,5 +132,10 @@ public function importGraduateStudents(Request $request){
          } 
     }
 
+    public function getStudentId($unversity_id){
+        $graduate_student=GraduatedStudent::with(['college','year','admission','study','departement'])->where('unversity_id',$unversity_id)->first(); 
+        return response()->json($graduate_student);
+    }
+
  
 }

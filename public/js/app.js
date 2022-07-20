@@ -2841,6 +2841,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -4634,6 +4642,46 @@ var routes = [{
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_frontend_freshman_view_info_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/frontend/freshman/view_info.vue */ "./resources/js/views/frontend/freshman/view_info.vue"));
     }
+  }, //announcement
+  {
+    path: 'announcemnet_list',
+    name: 'AnnouncementList',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_frontend_announcement_announcemnet_list_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/frontend/announcement/announcemnet_list.vue */ "./resources/js/views/frontend/announcement/announcemnet_list.vue"));
+    }
+  }, {
+    path: 'announcemnet_detail/:id',
+    name: 'AnnouncementDetail',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_frontend_announcement_aanouncement_detail_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/frontend/announcement/aanouncement_detail.vue */ "./resources/js/views/frontend/announcement/aanouncement_detail.vue"));
+    }
+  }, //admission 
+  {
+    path: 'admission_form',
+    name: 'AdmissionForm',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_frontend_admission_admission_form_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/frontend/admission/admission_form.vue */ "./resources/js/views/frontend/admission/admission_form.vue"));
+    }
+  }, {
+    path: 'application_form/:id',
+    name: 'ApplicationForm',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_frontend_admission_application_form_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/frontend/admission/application_form.vue */ "./resources/js/views/frontend/admission/application_form.vue"));
+    }
+  }, //programs
+  {
+    path: 'programs',
+    name: 'Programs',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_frontend_programs_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/frontend/programs.vue */ "./resources/js/views/frontend/programs.vue"));
+    }
+  }, //official transcript
+  {
+    path: 'official_transcript_form',
+    name: 'OfficailTranscript',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_frontend_alumni_official_transcript_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/frontend/alumni/official_transcript.vue */ "./resources/js/views/frontend/alumni/official_transcript.vue"));
+    }
   }]
 }, {
   path: "/home",
@@ -4837,6 +4885,7 @@ var routes = [{
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_students_graduate_edit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/students/graduate/edit.vue */ "./resources/js/views/students/graduate/edit.vue"));
     }
+<<<<<<< HEAD
   }, //payments
   {
     path: "all-payments",
@@ -4874,6 +4923,15 @@ var routes = [{
     name: "EditMails",
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_setups_mails_edit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/setups/mails/edit.vue */ "./resources/js/views/setups/mails/edit.vue"));
+=======
+  }, // finance routes
+  //official transcript 
+  {
+    path: 'finance_official_transcript',
+    name: 'FinanceOfficailTranscript',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_alumni_finance_official_transcript_index_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/alumni/finance/official_transcript/index.vue */ "./resources/js/views/alumni/finance/official_transcript/index.vue"));
+>>>>>>> 725b342 (Updated project including admission and official transcript)
     }
   }],
   meta: {
@@ -11741,21 +11799,47 @@ var render = function () {
         ),
       ]),
       _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
-      _vm._v(" "),
-      _vm._m(6),
-      _vm._v(" "),
-      _vm._m(7),
-      _vm._v(" "),
-      _c("li", { staticClass: "nav-heading" }, [_vm._v("Pages")]),
+      _c("li", { staticClass: "nav-item" }, [
+        _vm._m(4),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass: "nav-content collapse",
+            attrs: { id: "forms-nav", "data-bs-parent": "#sidebar-nav" },
+          },
+          [
+            _c(
+              "li",
+              [
+                _c(
+                  "router-link",
+                  { attrs: { to: "/home/finance_official_transcript" } },
+                  [
+                    _c("i", { staticClass: "bi bi-circle" }),
+                    _c("span", [_vm._v("Official Transcript")]),
+                  ]
+                ),
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._m(5),
+            _vm._v(" "),
+            _vm._m(6),
+            _vm._v(" "),
+            _vm._m(7),
+          ]
+        ),
+      ]),
       _vm._v(" "),
       _vm._m(8),
       _vm._v(" "),
       _vm._m(9),
       _vm._v(" "),
       _vm._m(10),
+      _vm._v(" "),
+      _c("li", { staticClass: "nav-heading" }, [_vm._v("Pages")]),
       _vm._v(" "),
       _vm._m(11),
       _vm._v(" "),
@@ -11764,6 +11848,12 @@ var render = function () {
       _vm._m(13),
       _vm._v(" "),
       _vm._m(14),
+      _vm._v(" "),
+      _vm._m(15),
+      _vm._v(" "),
+      _vm._m(16),
+      _vm._v(" "),
+      _vm._m(17),
     ]),
   ])
 }
@@ -11856,60 +11946,54 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c(
-        "a",
-        {
-          staticClass: "nav-link collapsed",
-          attrs: {
-            "data-bs-target": "#forms-nav",
-            "data-bs-toggle": "collapse",
-            href: "#",
-          },
+    return _c(
+      "a",
+      {
+        staticClass: "nav-link collapsed",
+        attrs: {
+          "data-bs-target": "#forms-nav",
+          "data-bs-toggle": "collapse",
+          href: "#",
         },
-        [
-          _c("i", { staticClass: "bi bi-journal-text" }),
-          _c("span", [_vm._v("Forms")]),
-          _c("i", { staticClass: "bi bi-chevron-down ms-auto" }),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "ul",
-        {
-          staticClass: "nav-content collapse",
-          attrs: { id: "forms-nav", "data-bs-parent": "#sidebar-nav" },
-        },
-        [
-          _c("li", [
-            _c("a", { attrs: { href: "forms-elements.html" } }, [
-              _c("i", { staticClass: "bi bi-circle" }),
-              _c("span", [_vm._v("Form Elements")]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "forms-layouts.html" } }, [
-              _c("i", { staticClass: "bi bi-circle" }),
-              _c("span", [_vm._v("Form Layouts")]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "forms-editors.html" } }, [
-              _c("i", { staticClass: "bi bi-circle" }),
-              _c("span", [_vm._v("Form Editors")]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "forms-validation.html" } }, [
-              _c("i", { staticClass: "bi bi-circle" }),
-              _c("span", [_vm._v("Form Validation")]),
-            ]),
-          ]),
-        ]
-      ),
+      },
+      [
+        _c("i", { staticClass: "bi bi-journal-text" }),
+        _c("span", [_vm._v("Finance")]),
+        _c("i", { staticClass: "bi bi-chevron-down ms-auto" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "forms-layouts.html" } }, [
+        _c("i", { staticClass: "bi bi-circle" }),
+        _c("span", [_vm._v("Form Layouts")]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "forms-editors.html" } }, [
+        _c("i", { staticClass: "bi bi-circle" }),
+        _c("span", [_vm._v("Form Editors")]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "forms-validation.html" } }, [
+        _c("i", { staticClass: "bi bi-circle" }),
+        _c("span", [_vm._v("Form Validation")]),
+      ]),
     ])
   },
   function () {
@@ -12503,7 +12587,12 @@ var render = function () {
       "div",
       { staticClass: "container d-flex align-items-center" },
       [
-        _vm._m(0),
+        _c(
+          "h1",
+          { staticClass: "logo me-auto" },
+          [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Mentor")])],
+          1
+        ),
         _vm._v(" "),
         _c(
           "nav",
@@ -12525,20 +12614,82 @@ var render = function () {
                 1
               ),
               _vm._v(" "),
-              _vm._m(1),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: "/announcemnet_list" } }, [
+                    _vm._v("Announcement"),
+                  ]),
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(2),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: "/programs" } }, [
+                    _vm._v("Programs"),
+                  ]),
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(3),
-              _vm._v(" "),
-              _vm._m(4),
-              _vm._v(" "),
-              _vm._m(5),
+              _c("li", { staticClass: "dropdown" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("ul", [
+                  _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: "/admission_form" } }, [
+                        _vm._v("Apply For Admission"),
+                      ]),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _vm._m(5),
+                ]),
+              ]),
               _vm._v(" "),
               _vm._m(6),
               _vm._v(" "),
               _c("li", { staticClass: "dropdown" }, [
                 _vm._m(7),
+                _vm._v(" "),
+                _c("ul", [
+                  _c(
+                    "li",
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: "/official_transcript_form" } },
+                        [_vm._v("Official Transcript")]
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm._m(8),
+                  _vm._v(" "),
+                  _vm._m(9),
+                  _vm._v(" "),
+                  _vm._m(10),
+                ]),
+              ]),
+              _vm._v(" "),
+              _vm._m(11),
+              _vm._v(" "),
+              _c("li", { staticClass: "dropdown" }, [
+                _vm._m(12),
                 _vm._v(" "),
                 _c("ul", [
                   _c(
@@ -12583,7 +12734,7 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(8),
+              _vm._m(13),
             ]),
             _vm._v(" "),
             _c("i", { staticClass: "bi bi-list mobile-nav-toggle" }),
@@ -12605,62 +12756,50 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h1", { staticClass: "logo me-auto" }, [
-      _c("a", { attrs: { href: "index.html" } }, [_vm._v("Mentor")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "about.html" } }, [_vm._v("Announcement")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "courses.html" } }, [_vm._v("Programs")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "dropdown" }, [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("span", [_vm._v("Admission")]),
-        _vm._v(" "),
-        _c("i", { staticClass: "bi bi-chevron-down" }),
-      ]),
+    return _c("a", { attrs: { href: "#" } }, [
+      _c("span", [_vm._v("Admission")]),
       _vm._v(" "),
-      _c("ul", [
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Apply For Admission")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Admission Status")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Upload Documents")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Official Tracking")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Special Transfer")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Staf Transfer")]),
-        ]),
-      ]),
+      _c("i", { staticClass: "bi bi-chevron-down" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Admission Status")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Upload Documents")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Official Tracking")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Special Transfer")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Staf Transfer")]),
     ])
   },
   function () {
@@ -12705,8 +12844,34 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#" } }, [
+      _c("span", [_vm._v("Alumni Services")]),
+      _vm._v(" "),
+      _c("i", { staticClass: "bi bi-chevron-down" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("li", [
-      _c("a", { attrs: { href: "events.html" } }, [_vm._v("Events")]),
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Orginal Degree")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Student Copy")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Temporary Certeficate")]),
     ])
   },
   function () {
@@ -31448,7 +31613,11 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
+<<<<<<< HEAD
 /******/ 			if ({"resources_js_views_frontend_freshman_view_info_vue":1,"resources_js_views_users_create_vue":1,"resources_js_views_users_edit_vue":1,"resources_js_views_accadamics_colleges_index_vue":1,"resources_js_views_accadamics_colleges_create_vue":1,"resources_js_views_accadamics_colleges_edit_vue":1,"resources_js_views_accadamics_departements_index_vue":1,"resources_js_views_accadamics_departements_create_vue":1,"resources_js_views_accadamics_departements_edit_vue":1,"resources_js_views_setups_Accadamic_year_index_vue":1,"resources_js_views_setups_Accadamic_year_create_vue":1,"resources_js_views_setups_Accadamic_year_edit_vue":1,"resources_js_views_setups_semister_index_vue":1,"resources_js_views_setups_semister_create_vue":1,"resources_js_views_setups_semister_edit_vue":1,"resources_js_views_setups_study_level_index_vue":1,"resources_js_views_setups_study_level_create_vue":1,"resources_js_views_setups_study_level_edit_vue":1,"resources_js_views_setups_admission_type_index_vue":1,"resources_js_views_setups_admission_type_create_vue":1,"resources_js_views_setups_admission_type_edit_vue":1,"resources_js_views_user_profile_index_vue":1,"resources_js_views_setups_announcement_index_vue":1,"resources_js_views_setups_announcement_create_vue":1,"resources_js_views_setups_announcement_edit_vue":1,"resources_js_views_students_fresh_index_vue":1,"resources_js_views_students_fresh_create_vue":1,"resources_js_views_students_fresh_edit_vue":1,"resources_js_views_students_graduate_index_vue":1,"resources_js_views_students_graduate_create_vue":1,"resources_js_views_students_graduate_edit_vue":1,"resources_js_views_setups_payments_index_vue":1,"resources_js_views_setups_payments_create_vue":1,"resources_js_views_setups_payments_edit_vue":1,"resources_js_views_setups_mails_index_vue":1,"resources_js_views_setups_mails_create_vue":1,"resources_js_views_setups_mails_edit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+=======
+/******/ 			if ({"resources_js_views_frontend_freshman_view_info_vue":1,"resources_js_views_frontend_announcement_announcemnet_list_vue":1,"resources_js_views_frontend_announcement_aanouncement_detail_vue":1,"resources_js_views_frontend_admission_admission_form_vue":1,"resources_js_views_frontend_admission_application_form_vue":1,"resources_js_views_frontend_programs_vue":1,"resources_js_views_frontend_alumni_official_transcript_vue":1,"resources_js_views_users_create_vue":1,"resources_js_views_users_edit_vue":1,"resources_js_views_accadamics_colleges_index_vue":1,"resources_js_views_accadamics_colleges_create_vue":1,"resources_js_views_accadamics_colleges_edit_vue":1,"resources_js_views_accadamics_departements_index_vue":1,"resources_js_views_accadamics_departements_create_vue":1,"resources_js_views_accadamics_departements_edit_vue":1,"resources_js_views_setups_Accadamic_year_index_vue":1,"resources_js_views_setups_Accadamic_year_create_vue":1,"resources_js_views_setups_Accadamic_year_edit_vue":1,"resources_js_views_setups_semister_index_vue":1,"resources_js_views_setups_semister_create_vue":1,"resources_js_views_setups_semister_edit_vue":1,"resources_js_views_setups_study_level_index_vue":1,"resources_js_views_setups_study_level_create_vue":1,"resources_js_views_setups_study_level_edit_vue":1,"resources_js_views_setups_admission_type_index_vue":1,"resources_js_views_setups_admission_type_create_vue":1,"resources_js_views_setups_admission_type_edit_vue":1,"resources_js_views_user_profile_index_vue":1,"resources_js_views_setups_announcement_index_vue":1,"resources_js_views_setups_announcement_create_vue":1,"resources_js_views_setups_announcement_edit_vue":1,"resources_js_views_students_fresh_index_vue":1,"resources_js_views_students_fresh_create_vue":1,"resources_js_views_students_fresh_edit_vue":1,"resources_js_views_students_graduate_index_vue":1,"resources_js_views_students_graduate_create_vue":1,"resources_js_views_students_graduate_edit_vue":1,"resources_js_views_alumni_finance_official_transcript_index_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+>>>>>>> 725b342 (Updated project including admission and official transcript)
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

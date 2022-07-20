@@ -7,11 +7,13 @@ use App\Http\Controllers\Backend\PaymentController;
 use App\Http\Controllers\Backend\SemisterController;
 use App\Http\Controllers\Backend\DepartmentController;
 use App\Http\Controllers\Backend\StudyLevelController;
+use App\Http\Controllers\Frontend\AdmissionController;
 use App\Http\Controllers\Backend\AcadamicYearController;
 use App\Http\Controllers\Backend\AnnouncementController;
 use App\Http\Controllers\Backend\FreshStudentController;
 use App\Http\Controllers\Backend\AdmissionTypeController;
 use App\Http\Controllers\Backend\GraduatedStudentController;
+use App\Http\Controllers\Frontend\OfficialTranscriptController;
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
@@ -32,6 +34,8 @@ Route::group(['prefix'=>'user'],function(){
       Route::apiResource('/study_levels',StudyLevelController::class)->middleware('scope:do_anything');
       Route::apiResource('/admission_types',AdmissionTypeController::class)->middleware('scope:do_anything');
       Route::apiResource('/announcements',AnnouncementController::class)->middleware('scope:do_anything');
+
+      
       Route::get('/announcementStatus/{id}',[AnnouncementController::class,'statusDeactivate'])->middleware('scope:do_anything');
      // student
      Route::apiResource('/fresh_students',FreshStudentController::class)->middleware('scope:do_anything');
@@ -43,19 +47,34 @@ Route::group(['prefix'=>'user'],function(){
       // mails
      Route::apiResource('/mails',MailController::class)->middleware('scope:do_anything');
       
-      Route::post('edit-category',function(){
-          return response()->json([
-             'message'=>'admin access',
-             'status_code'=>200,
-          ],200);
-        })->middleware('scope:do_anything');
-        Route::post('create-category',function(){
-            return response()->json([
-               'message'=>'Everyone access',
-               'status_code'=>200,
-            ],200);
-          })->middleware('scope:do_anything,can_create');
+    //   Route::post('edit-category',function(){
+    //       return response()->json([
+    //          'message'=>'admin access',
+    //          'status_code'=>200,
+    //       ],200);
+    //     })->middleware('scope:do_anything');
+    //     Route::post('create-category',function(){
+    //         return response()->json([
+    //            'message'=>'Everyone access',
+    //            'status_code'=>200,
+    //         ],200);
+    //       })->middleware('scope:do_anything,can_create');
     });
-   Route::get('/getfreshdata/{id}',[FreshStudentController::class,'getStudentData']);
 
+    //frontend
+   Route::get('/getfreshdata/{id}',[FreshStudentController::class,'getStudentData']);
+   Route::get('/getAnnouncements',[AnnouncementController::class,'getAnnouncemts']);
+   Route::get('/getAnnouncements/{id}',[AnnouncementController::class,'getAnnouncemtDetail']);
+   Route::get('/programs',[DepartmentController::class,'getPrograms']);
+   Route::get('/getStudentId/{unversity_id}',[GraduatedStudentController::class,'getStudentId']);
+   Route::post('/submitApplicationForm',[AdmissionController::class,'sendApplicationFormRequest']);
+
+      // offficial transcript
+   Route::post('/officialtranscript',[OfficialTranscriptController::class,'sendOfficialRequest']);
+   Route::get('/officialApplicants',[OfficialTranscriptController::class,'getofficialApplicants']);
+  
+
+  
+   
 });
+

@@ -14,7 +14,7 @@
                         <form class="row g-3" @submit.prevent="getStudentData">
                             <div class="col-md-4">
                                 <label for="inputNanme4" class="form-label"> <b>Registration Number</b> </label>
-                                <input type="text" class="form-control" v-model="registration_number" placeholder="Registration Number">
+                                <input type="text" class="form-control" v-model.trim="registration_number" placeholder="Registration Number">
                             </div>
                             <div class="col-md-2" style="padding-top: 30px;">
                                 <button type="submit" v-if="registration_number" class="btn btn-primary">Search</button>
@@ -131,7 +131,8 @@ export default {
             }
             // objectSize here holds the size of your object
             return objectSize
-        }
+        },
+
     },
     methods: {
 
@@ -146,10 +147,7 @@ export default {
                                 icon: 'error',
                                 title: 'We cannot find this Registration number ,try again!'
                             })
-                          this.flashMessage.error({
-                                message: 'Something went wrong please contact system admin!',
-                                time: 5000
-                            });    
+                          
                     }
                 }).catch(error => {
                     switch (error.response.status) {
@@ -185,7 +183,7 @@ export default {
 
 <style scoped>
 #main,
-#footer {
+#footer { 
     margin-left: 0px;
 }
 
