@@ -14,7 +14,7 @@ import ViewUser from "./views/users/index.vue";
 Vue.use(Router);
 
 const routes = [
-   
+
       {
         path:'/',
         component:Wellcome,
@@ -45,6 +45,7 @@ const routes = [
                 name:'Freshman Info',
                 component:()=>import('./views/frontend/freshman/view_info.vue')
 
+
             },
             //announcement
             {
@@ -57,7 +58,7 @@ const routes = [
                 name:'AnnouncementDetail',
                 component:()=>import('./views/frontend/announcement/aanouncement_detail.vue')
             },
-            //admission 
+            //admission
             {
                 path:'admission_form',
                 name:'AdmissionForm',
@@ -80,11 +81,15 @@ const routes = [
                 name:'OfficailTranscript',
                 component:()=>import('./views/frontend/alumni/official_transcript.vue')
             },
-          
 
-          
-        ]
-      } ,
+
+
+
+
+
+
+        ],
+    },
 
     {
         path: "/home",
@@ -200,7 +205,7 @@ const routes = [
                 name: "EditStudyLevel",
                 component: () => import("./views/setups/study_level/edit.vue"),
             },
-             //Admission type 
+             //Admission type
              {
                 path: "all-admission_type",
                 name: "AllAdmissionType",
@@ -226,7 +231,7 @@ const routes = [
             },
 
 
-             //Announcement type 
+             //Announcement type
              {
                 path: "all-announcement",
                 name: "AllAnnouncement",
@@ -274,7 +279,7 @@ const routes = [
                 name: "EditGraduateStudent",
                 component: () => import("./views/students/graduate/edit.vue"),
             },
-<<<<<<< HEAD
+
             //payments
             {
                 path: "all-payments",
@@ -306,18 +311,35 @@ const routes = [
                 path: "edit-mails/:id",
                 name: "EditMails",
                 component: () => import("./views/setups/mails/edit.vue"),
-=======
+            },
               // finance routes
 
-            //official transcript 
+            //official transcript
 
             {
                 path:'finance_official_transcript',
                 name:'FinanceOfficailTranscript',
                 component:()=>import('./views/alumni/finance/official_transcript/index.vue')
->>>>>>> 725b342 (Updated project including admission and official transcript)
+
+            },
+            //callanders
+            {
+                path: "all-callanders",
+                name: "AllCallanders",
+                component: () => import("./views/setups/callander/index.vue"),
+            },
+            {
+                path: "create-callander",
+                name: "CreateCallander",
+                component: () => import("./views/setups/callander/create.vue"),
+            },
+            {
+                path: "edit-callander/:id",
+                name: "EditCallander",
+                component: () => import("./views/setups/callander/edit.vue"),
             },
         ],
+
         meta: {
             requiresAuth: true,
         },

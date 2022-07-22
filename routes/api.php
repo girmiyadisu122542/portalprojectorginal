@@ -35,7 +35,7 @@ Route::group(['prefix'=>'user'],function(){
       Route::apiResource('/admission_types',AdmissionTypeController::class)->middleware('scope:do_anything');
       Route::apiResource('/announcements',AnnouncementController::class)->middleware('scope:do_anything');
 
-      
+
       Route::get('/announcementStatus/{id}',[AnnouncementController::class,'statusDeactivate'])->middleware('scope:do_anything');
      // student
      Route::apiResource('/fresh_students',FreshStudentController::class)->middleware('scope:do_anything');
@@ -46,7 +46,7 @@ Route::group(['prefix'=>'user'],function(){
      Route::apiResource('/payments',PaymentController::class)->middleware('scope:do_anything');
       // mails
      Route::apiResource('/mails',MailController::class)->middleware('scope:do_anything');
-      
+
     //   Route::post('edit-category',function(){
     //       return response()->json([
     //          'message'=>'admin access',
@@ -72,9 +72,9 @@ Route::group(['prefix'=>'user'],function(){
       // offficial transcript
    Route::post('/officialtranscript',[OfficialTranscriptController::class,'sendOfficialRequest']);
    Route::get('/officialApplicants',[OfficialTranscriptController::class,'getofficialApplicants']);
-  
 
-  
-   
+
+
+
 });
 

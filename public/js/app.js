@@ -4655,7 +4655,7 @@ var routes = [{
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_frontend_announcement_aanouncement_detail_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/frontend/announcement/aanouncement_detail.vue */ "./resources/js/views/frontend/announcement/aanouncement_detail.vue"));
     }
-  }, //admission 
+  }, //admission
   {
     path: 'admission_form',
     name: 'AdmissionForm',
@@ -4802,7 +4802,7 @@ var routes = [{
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_setups_study_level_edit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/setups/study_level/edit.vue */ "./resources/js/views/setups/study_level/edit.vue"));
     }
-  }, //Admission type 
+  }, //Admission type
   {
     path: "all-admission_type",
     name: "AllAdmissionType",
@@ -4828,7 +4828,7 @@ var routes = [{
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_user_profile_index_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/user_profile/index.vue */ "./resources/js/views/user_profile/index.vue"));
     }
-  }, //Announcement type 
+  }, //Announcement type
   {
     path: "all-announcement",
     name: "AllAnnouncement",
@@ -4885,7 +4885,6 @@ var routes = [{
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_students_graduate_edit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/students/graduate/edit.vue */ "./resources/js/views/students/graduate/edit.vue"));
     }
-<<<<<<< HEAD
   }, //payments
   {
     path: "all-payments",
@@ -4923,15 +4922,33 @@ var routes = [{
     name: "EditMails",
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_setups_mails_edit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/setups/mails/edit.vue */ "./resources/js/views/setups/mails/edit.vue"));
-=======
+    }
   }, // finance routes
-  //official transcript 
+  //official transcript
   {
     path: 'finance_official_transcript',
     name: 'FinanceOfficailTranscript',
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_views_alumni_finance_official_transcript_index_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/alumni/finance/official_transcript/index.vue */ "./resources/js/views/alumni/finance/official_transcript/index.vue"));
->>>>>>> 725b342 (Updated project including admission and official transcript)
+    }
+  }, //callanders
+  {
+    path: "all-callanders",
+    name: "AllCallanders",
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_setups_callander_index_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/setups/callander/index.vue */ "./resources/js/views/setups/callander/index.vue"));
+    }
+  }, {
+    path: "create-callander",
+    name: "CreateCallander",
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_setups_callander_create_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/setups/callander/create.vue */ "./resources/js/views/setups/callander/create.vue"));
+    }
+  }, {
+    path: "edit-callander/:id",
+    name: "EditCallander",
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_setups_callander_edit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/setups/callander/edit.vue */ "./resources/js/views/setups/callander/edit.vue"));
     }
   }],
   meta: {
@@ -31613,11 +31630,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-<<<<<<< HEAD
-/******/ 			if ({"resources_js_views_frontend_freshman_view_info_vue":1,"resources_js_views_users_create_vue":1,"resources_js_views_users_edit_vue":1,"resources_js_views_accadamics_colleges_index_vue":1,"resources_js_views_accadamics_colleges_create_vue":1,"resources_js_views_accadamics_colleges_edit_vue":1,"resources_js_views_accadamics_departements_index_vue":1,"resources_js_views_accadamics_departements_create_vue":1,"resources_js_views_accadamics_departements_edit_vue":1,"resources_js_views_setups_Accadamic_year_index_vue":1,"resources_js_views_setups_Accadamic_year_create_vue":1,"resources_js_views_setups_Accadamic_year_edit_vue":1,"resources_js_views_setups_semister_index_vue":1,"resources_js_views_setups_semister_create_vue":1,"resources_js_views_setups_semister_edit_vue":1,"resources_js_views_setups_study_level_index_vue":1,"resources_js_views_setups_study_level_create_vue":1,"resources_js_views_setups_study_level_edit_vue":1,"resources_js_views_setups_admission_type_index_vue":1,"resources_js_views_setups_admission_type_create_vue":1,"resources_js_views_setups_admission_type_edit_vue":1,"resources_js_views_user_profile_index_vue":1,"resources_js_views_setups_announcement_index_vue":1,"resources_js_views_setups_announcement_create_vue":1,"resources_js_views_setups_announcement_edit_vue":1,"resources_js_views_students_fresh_index_vue":1,"resources_js_views_students_fresh_create_vue":1,"resources_js_views_students_fresh_edit_vue":1,"resources_js_views_students_graduate_index_vue":1,"resources_js_views_students_graduate_create_vue":1,"resources_js_views_students_graduate_edit_vue":1,"resources_js_views_setups_payments_index_vue":1,"resources_js_views_setups_payments_create_vue":1,"resources_js_views_setups_payments_edit_vue":1,"resources_js_views_setups_mails_index_vue":1,"resources_js_views_setups_mails_create_vue":1,"resources_js_views_setups_mails_edit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
-=======
-/******/ 			if ({"resources_js_views_frontend_freshman_view_info_vue":1,"resources_js_views_frontend_announcement_announcemnet_list_vue":1,"resources_js_views_frontend_announcement_aanouncement_detail_vue":1,"resources_js_views_frontend_admission_admission_form_vue":1,"resources_js_views_frontend_admission_application_form_vue":1,"resources_js_views_frontend_programs_vue":1,"resources_js_views_frontend_alumni_official_transcript_vue":1,"resources_js_views_users_create_vue":1,"resources_js_views_users_edit_vue":1,"resources_js_views_accadamics_colleges_index_vue":1,"resources_js_views_accadamics_colleges_create_vue":1,"resources_js_views_accadamics_colleges_edit_vue":1,"resources_js_views_accadamics_departements_index_vue":1,"resources_js_views_accadamics_departements_create_vue":1,"resources_js_views_accadamics_departements_edit_vue":1,"resources_js_views_setups_Accadamic_year_index_vue":1,"resources_js_views_setups_Accadamic_year_create_vue":1,"resources_js_views_setups_Accadamic_year_edit_vue":1,"resources_js_views_setups_semister_index_vue":1,"resources_js_views_setups_semister_create_vue":1,"resources_js_views_setups_semister_edit_vue":1,"resources_js_views_setups_study_level_index_vue":1,"resources_js_views_setups_study_level_create_vue":1,"resources_js_views_setups_study_level_edit_vue":1,"resources_js_views_setups_admission_type_index_vue":1,"resources_js_views_setups_admission_type_create_vue":1,"resources_js_views_setups_admission_type_edit_vue":1,"resources_js_views_user_profile_index_vue":1,"resources_js_views_setups_announcement_index_vue":1,"resources_js_views_setups_announcement_create_vue":1,"resources_js_views_setups_announcement_edit_vue":1,"resources_js_views_students_fresh_index_vue":1,"resources_js_views_students_fresh_create_vue":1,"resources_js_views_students_fresh_edit_vue":1,"resources_js_views_students_graduate_index_vue":1,"resources_js_views_students_graduate_create_vue":1,"resources_js_views_students_graduate_edit_vue":1,"resources_js_views_alumni_finance_official_transcript_index_vue":1}[chunkId]) return "js/" + chunkId + ".js";
->>>>>>> 725b342 (Updated project including admission and official transcript)
+/******/ 			if ({"resources_js_views_frontend_freshman_view_info_vue":1,"resources_js_views_frontend_announcement_announcemnet_list_vue":1,"resources_js_views_frontend_announcement_aanouncement_detail_vue":1,"resources_js_views_frontend_admission_admission_form_vue":1,"resources_js_views_frontend_admission_application_form_vue":1,"resources_js_views_frontend_programs_vue":1,"resources_js_views_frontend_alumni_official_transcript_vue":1,"resources_js_views_users_create_vue":1,"resources_js_views_users_edit_vue":1,"resources_js_views_accadamics_colleges_index_vue":1,"resources_js_views_accadamics_colleges_create_vue":1,"resources_js_views_accadamics_colleges_edit_vue":1,"resources_js_views_accadamics_departements_index_vue":1,"resources_js_views_accadamics_departements_create_vue":1,"resources_js_views_accadamics_departements_edit_vue":1,"resources_js_views_setups_Accadamic_year_index_vue":1,"resources_js_views_setups_Accadamic_year_create_vue":1,"resources_js_views_setups_Accadamic_year_edit_vue":1,"resources_js_views_setups_semister_index_vue":1,"resources_js_views_setups_semister_create_vue":1,"resources_js_views_setups_semister_edit_vue":1,"resources_js_views_setups_study_level_index_vue":1,"resources_js_views_setups_study_level_create_vue":1,"resources_js_views_setups_study_level_edit_vue":1,"resources_js_views_setups_admission_type_index_vue":1,"resources_js_views_setups_admission_type_create_vue":1,"resources_js_views_setups_admission_type_edit_vue":1,"resources_js_views_user_profile_index_vue":1,"resources_js_views_setups_announcement_index_vue":1,"resources_js_views_setups_announcement_create_vue":1,"resources_js_views_setups_announcement_edit_vue":1,"resources_js_views_students_fresh_index_vue":1,"resources_js_views_students_fresh_create_vue":1,"resources_js_views_students_fresh_edit_vue":1,"resources_js_views_students_graduate_index_vue":1,"resources_js_views_students_graduate_create_vue":1,"resources_js_views_students_graduate_edit_vue":1,"resources_js_views_setups_payments_index_vue":1,"resources_js_views_setups_payments_create_vue":1,"resources_js_views_setups_payments_edit_vue":1,"resources_js_views_setups_mails_index_vue":1,"resources_js_views_setups_mails_create_vue":1,"resources_js_views_setups_mails_edit_vue":1,"resources_js_views_alumni_finance_official_transcript_index_vue":1,"resources_js_views_setups_callander_index_vue":1,"resources_js_views_setups_callander_create_vue":1,"resources_js_views_setups_callander_edit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
